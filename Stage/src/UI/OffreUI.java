@@ -10,11 +10,13 @@ import dao.EntrepriseDAO;
 import dao.OffreStageDAO;
 import dao.SecteurActiviteDAO;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.ListIterator;
+import javafx.embed.swing.JFXPanel;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -37,7 +39,7 @@ import stage.metier.SecteurActivite;
  *
  * @author aya
  */
-public class OffreUI extends javax.swing.JPanel {
+public class OffreUI extends JPanel {
 
     private JTextField nomEntrepriseField = new JTextField(30);
     private JTextField villeField = new JTextField(30);
@@ -66,16 +68,18 @@ public class OffreUI extends javax.swing.JPanel {
         setBorder(new TitledBorder(new EtchedBorder(),"Consulter les Offres"));
         setLayout(new BorderLayout(5, 5));
         add(initFields(), BorderLayout.NORTH);
-        add(initButtons(), BorderLayout.CENTER);        
+        add(initButtons(), BorderLayout.CENTER);  
         //setFieldData(uneEntreprise.moveFirst());
     }
     
     private JPanel initButtons() {
       JPanel panel = new JPanel();
       panel.setLayout(new FlowLayout(FlowLayout.CENTER, 3, 3));
+      panel.setBackground(Color.decode("#73f1d2"));
       panel.add(precedentButton);
       panel.add(suivantButton);
       panel.add(cancelButton);
+     
       
       precedentButton.addActionListener(new ButtonHandler());
       suivantButton.addActionListener(new ButtonHandler());
@@ -112,7 +116,7 @@ public class OffreUI extends javax.swing.JPanel {
       panel.add(new JLabel("Durée du stage"), "align label");
       panel.add(dureeStageField, "wrap");
       //telField.setEnabled(false);
-
+      panel.setBackground(Color.decode("#73f1d2"));
       return panel;
    }
 

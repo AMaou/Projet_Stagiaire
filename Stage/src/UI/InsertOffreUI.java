@@ -10,12 +10,14 @@ import dao.EntrepriseDAO;
 import dao.OffreStageDAO;
 import dao.SecteurActiviteDAO;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javafx.embed.swing.JFXPanel;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -38,7 +40,7 @@ import stage.metier.SecteurActivite;
  *
  * @author aya
  */
-public class InsertOffreUI extends javax.swing.JPanel {
+public class InsertOffreUI extends JPanel {
 
     private JTextField libelleField = new JTextField(30);
     private JTextField dateDebField = new JTextField(30);
@@ -70,19 +72,21 @@ public class InsertOffreUI extends javax.swing.JPanel {
     private JPanel initButtons() {
       JPanel panel = new JPanel();
       panel.setLayout(new FlowLayout(FlowLayout.CENTER, 3, 3));
+      panel.setBackground(Color.decode("#e8efed"));
       panel.add(sendButton);
       panel.add(cancelButton);
       
       sendButton.addActionListener(new ButtonHandler());
       cancelButton.addActionListener(new ButtonHandler());
       //list.addListSelectionListener(new OffreSelectionListener());
-      
+      panel.setBackground(Color.decode("#73f1d2"));
       return panel;
    }
     
      private JPanel initFields() {
          
         JPanel panel = new JPanel();
+        panel.setBackground(Color.decode("#73f1d2"));
         panel.setLayout(new MigLayout());
         DefaultListModel dlm1 = new DefaultListModel();
         for(Entreprise uneEntreprise : eDAO.findAll() ){

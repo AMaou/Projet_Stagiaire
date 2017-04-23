@@ -11,10 +11,9 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.FlowLayout;
-import java.awt.Label;
+import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionListener;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -27,8 +26,6 @@ import javax.swing.ListCellRenderer;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EtchedBorder;
 import javax.swing.border.TitledBorder;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import net.miginfocom.swing.MigLayout;
 import stage.metier.*;
 
@@ -36,7 +33,7 @@ import stage.metier.*;
  *
  * @author aya
  */
-public class EntrepriseUI extends javax.swing.JPanel {
+public class EntrepriseUI extends JPanel  {
     
     private JTextField raisonSocialeField = new JTextField(30);
     private JTextField villeField = new JTextField(30);
@@ -61,7 +58,8 @@ public class EntrepriseUI extends javax.swing.JPanel {
         setBorder(new TitledBorder(new EtchedBorder(),"Nouvelle Entreprise"));
         setLayout(new BorderLayout(5, 5));
         add(initFields(), BorderLayout.NORTH);
-        add(initButtons(), BorderLayout.CENTER);        
+        add(initButtons(), BorderLayout.CENTER); 
+        setBackground(Color.decode("#73f1d2"));
         //setFieldData(uneEntreprise.moveFirst());
     }
     
@@ -71,34 +69,49 @@ public class EntrepriseUI extends javax.swing.JPanel {
       panel.add(sendButton);
       panel.add(cancelButton);
       
+      
       sendButton.addActionListener(new ButtonHandler());
       cancelButton.addActionListener(new ButtonHandler());
       //list.addListSelectionListener(new OffreSelectionListener());
-      
+      //Image background = Toolkit.getDefaultToolkit().createImage("Background.png");
+      //panel.drawImage(background, 0, 0, null);
+      panel.setBackground(Color.decode("#73f1d2"));
       return panel;
    }
-    
+
      private JPanel initFields() {
       JPanel panel = new JPanel();
+      panel.setBackground(Color.decode("#73f1d2"));
+
       panel.setLayout(new MigLayout());
       
-      panel.add(new JLabel("Raison Sociale"), "align label");
+      JLabel raisonSocialeLabel = new JLabel("Raison Sociale");
+      raisonSocialeLabel.setBorder(new RoundedBorder(Color.BLACK, 15));
+      panel.add(raisonSocialeLabel, "align label");
       panel.add(raisonSocialeField, "wrap");
       //raisonSocialeField.setEnabled(false);
       
-      panel.add(new JLabel("Ville"), "align label");
+      JLabel villeLabel =  new JLabel("Ville");
+      villeLabel.setBorder(new RoundedBorder(Color.BLACK, 15));
+      panel.add(villeLabel, "align label");
       panel.add(villeField, "wrap");
       //villeField.setEnabled(false);
-      
-      panel.add(new JLabel("Rue"), "align label");
+     
+      JLabel rueLabel =  new JLabel("Rue");
+      rueLabel.setBorder(new RoundedBorder(Color.BLACK, 15));
+      panel.add(rueLabel, "align label");
       panel.add(rueField, "wrap");
       //rueField.setEnabled(false);
       
-      panel.add(new JLabel("CP"), "align label");
-      panel.add(cpField, "wrap");
+      JLabel cpLabel =  new JLabel("CP");
+      cpLabel.setBorder(new RoundedBorder(Color.BLACK, 15));
+      panel.add(cpLabel, "align label");
+      panel.add(cpField, "wrap"); 
       //cpField.setEnabled(false);
       
-      panel.add(new JLabel("Tel"), "align label");
+      JLabel telLabel =  new JLabel("Tel");
+      telLabel.setBorder(new RoundedBorder(Color.BLACK, 15));
+      panel.add(telLabel, "align label");
       panel.add(telField, "wrap");
       //telField.setEnabled(false);
       
@@ -110,11 +123,19 @@ public class EntrepriseUI extends javax.swing.JPanel {
       list.setCellRenderer(new SecteurRenderer());
       JScrollPane sp1 = new JScrollPane(list);
       sp1.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-      panel.add(new JLabel("Secteur"), "align label");
+      
+      JLabel secteurLabel =  new JLabel("Secteur");
+      //secteurLabel.setOpaque(true);
+      //secteurLabel.setBackground(Color.cyan);
+      secteurLabel.setBorder(new RoundedBorder(Color.black, 15));
+      panel.add(secteurLabel, "align label");
       panel.add(sp1, "wrap");
+      //panel.setBackground(Color.cyan);
+      //Image background = Toolkit.getDefaultToolkit().createImage("Background.png");
+      //g.drawImage(image, 0, 0, null);
       return panel;
    }
-
+     
    private Entreprise getFieldData() {
        if (!isEmptyFieldData()){
       Entreprise e = new Entreprise();
@@ -196,9 +217,7 @@ public class EntrepriseUI extends javax.swing.JPanel {
             }
             return this;
         }
-    }
-
-    
+    }   
     
 
     /**
@@ -210,19 +229,30 @@ public class EntrepriseUI extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jComboBox1 = new javax.swing.JComboBox<>();
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(286, Short.MAX_VALUE)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(58, 58, 58))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(84, 84, 84)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(196, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> jComboBox1;
     // End of variables declaration//GEN-END:variables
 }

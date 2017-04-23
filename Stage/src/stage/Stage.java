@@ -3,7 +3,6 @@ package stage;
 import UI.EntrepriseUI;
 import UI.InsertOffreUI;
 import UI.OffreUI;
-import dao.OffreStageDAO;
 import dao.UserDAO;
 import java.awt.*;
 import java.awt.event.*;
@@ -17,14 +16,19 @@ public class Stage implements ItemListener {
     final static String consulterOffres = "Consulter les offres";
     private UserDAO uDAO = new UserDAO();
      
-    public void addComponentToPane(Container pane) {
+    public void addComponentToPane(Container pane){
         //Put the JComboBox in a JPanel to get a nicer look.
         JPanel comboBoxPane = new JPanel(); //use FlowLayout
+        comboBoxPane.setBackground(Color.decode("#73f1d2"));
+       
+
         String comboBoxItems[] = { creerEntreprise, creerOffre, consulterOffres };
         JComboBox cb = new JComboBox(comboBoxItems);
         cb.setEditable(false);
         cb.addItemListener(this);
         comboBoxPane.add(cb);
+        cb.setBackground(Color.decode("#daf2eb"));;
+        
          
         //Create the "cards".
         JPanel card1 = new EntrepriseUI();
@@ -32,19 +36,22 @@ public class Stage implements ItemListener {
         JPanel card2 = new InsertOffreUI();
         
         JPanel card3 = new OffreUI();
+               
+     
          
         //Create the panel that contains the "cards".
         cards = new JPanel(new CardLayout());
         cards.add(card1, creerEntreprise);
         cards.add(card2, creerOffre);
         cards.add(card3, consulterOffres);
-         
+        //cards.setBackground(Color.yellow);
         pane.add(comboBoxPane, BorderLayout.PAGE_START);
         pane.add(cards, BorderLayout.CENTER);
-        
+      
+        //interface authentification
         JPanel userPanel = new JPanel();
         userPanel.setLayout(new GridLayout(2,2));
-        
+         
         JLabel usernameLbl = new JLabel("Username:");
         JLabel passwordLbl = new JLabel("Password:");
         JTextField username = new JTextField();
@@ -54,6 +61,8 @@ public class Stage implements ItemListener {
         userPanel.add(username);
         userPanel.add(passwordLbl);
         userPanel.add(passwordFld);
+        
+        //userPanel.setBackground(Color.decode("#73f1d2"));
         
         boolean checkLogin = false;
         while (checkLogin != true){
@@ -75,6 +84,8 @@ public class Stage implements ItemListener {
     public void itemStateChanged(ItemEvent evt) {
         CardLayout cl = (CardLayout)(cards.getLayout());
         cl.show(cards, (String)evt.getItem());
+      
+
     }
      
     /**
@@ -85,12 +96,15 @@ public class Stage implements ItemListener {
     private static void createAndShowGUI() {
         //Create and set up the window.
         JFrame frame = new JFrame("Gestion des Offres de stage");
+        
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //frame.setBackground(Color.yellow);
+        
          
         //Create and set up the content pane.
         Stage demo = new Stage();
         demo.addComponentToPane(frame.getContentPane());
-         
+        
         //Display the window.
         frame.pack();
         frame.setVisible(true);
