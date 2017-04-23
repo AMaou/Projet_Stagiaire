@@ -16,7 +16,7 @@ import stage.metier.DomaineOffre;
 
 /**
  *
- * @author
+ * @author Aya
  */
 public class DomaineOffreDAO extends DAO<DomaineOffre>{
     

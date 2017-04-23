@@ -11,7 +11,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author 
+ * @author Aya
  */
 
 public class ConnectionPostgreSQL{

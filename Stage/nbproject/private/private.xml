@@ -3,14 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/aya/Desktop/L3%20Miage/ProjetJava/Stage/src/dao/DomaineOffreDAO.java</file>
-            <file>file:/C:/Users/aya/Desktop/L3%20Miage/ProjetJava/Stage/src/stage/Stage.java</file>
-            <file>file:/C:/Users/aya/Desktop/L3%20Miage/ProjetJava/Stage/src/dao/SecteurActiviteDAO.java</file>
-            <file>file:/C:/Users/aya/Desktop/L3%20Miage/ProjetJava/Stage/src/UI/AccueilUI.java</file>
-            <file>file:/C:/Users/aya/Desktop/L3%20Miage/ProjetJava/Stage/src/dao/OffreStageDAO.java</file>
-            <file>file:/C:/Users/aya/Desktop/L3%20Miage/ProjetJava/Stage/src/UI/EntrepriseUI.java</file>
-            <file>file:/C:/Users/aya/Desktop/L3%20Miage/ProjetJava/Stage/src/dao/EntrepriseDAO.java</file>
-            <file>file:/C:/Users/aya/Desktop/L3%20Miage/ProjetJava/Stage/src/dao/DAO.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/dao/UserDAO.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/stage/metier/DomaineOffre.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/dao/OffreStageDAO.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/jdbc/ConnectionPostgreSQL.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/UI/InsertOffreUI.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/dao/DomaineOffreDAO.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/stage/metier/User.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/UI/OffreUI.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/stage/metier/Entreprise.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/stage/metier/OffreStage.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/dao/EntrepriseDAO.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/dao/SecteurActiviteDAO.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/dao/DAO.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/UI/EntrepriseUI.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/stage/Stage.java</file>
+            <file>file:/C:/Users/aya/Desktop/L3%20Miage/Java/Projets/Stage/src/stage/metier/SecteurActivite.java</file>
         </group>
     </open-files>
 </project-private>

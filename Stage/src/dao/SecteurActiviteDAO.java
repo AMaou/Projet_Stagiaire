@@ -16,7 +16,7 @@ import stage.metier.SecteurActivite;
 
 /**
  *
- * @author 
+ * @author Aya
  */
 public class SecteurActiviteDAO extends DAO<SecteurActivite> {
 

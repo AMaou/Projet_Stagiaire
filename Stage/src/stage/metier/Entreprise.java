@@ -7,7 +7,7 @@ package stage.metier;
 
 /**
  *
- * @author 
+ * @author Aya
  */
 public class Entreprise {
   private int idEnt;

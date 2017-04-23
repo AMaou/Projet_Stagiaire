@@ -35,7 +35,7 @@ import stage.metier.SecteurActivite;
 
 /**
  *
- * @author 
+ * @author aya
  */
 public class OffreUI extends javax.swing.JPanel {
 

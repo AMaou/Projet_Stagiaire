@@ -8,6 +8,7 @@ package UI;
 import dao.EntrepriseDAO;
 import dao.SecteurActiviteDAO;
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.Label;
@@ -33,7 +34,7 @@ import stage.metier.*;
 
 /**
  *
- * @author 
+ * @author aya
  */
 public class EntrepriseUI extends javax.swing.JPanel {
     
@@ -56,6 +57,7 @@ public class EntrepriseUI extends javax.swing.JPanel {
      */
     public EntrepriseUI() {
         //initComponents();
+        //setBackground(Color.BLACK);
         setBorder(new TitledBorder(new EtchedBorder(),"Nouvelle Entreprise"));
         setLayout(new BorderLayout(5, 5));
         add(initFields(), BorderLayout.NORTH);

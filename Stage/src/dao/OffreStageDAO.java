@@ -16,7 +16,7 @@ import stage.metier.OffreStage;
 
 /**
  *
- * @author 
+ * @author Aya
  */
 public class OffreStageDAO extends DAO<OffreStage>{
 
@@ -91,7 +91,7 @@ public class OffreStageDAO extends DAO<OffreStage>{
 
             PreparedStatement pstat = connect.prepareStatement("INSERT INTO offrestage (IdEnt, LibelleO, DescriptifO, DateDebutO, DureeO, Remuneration, Valide, IdDomaine) VALUES\n" +
 "(?, ?, ?, ?, ?, ?, ?, ?)"); 
-            pstat.setInt(1, obj.getIdOffre());
+            pstat.setInt(1, obj.getEntreprise().getIdEnt());
             pstat.setString(2, obj.getLibelleO());
             pstat.setString(3, obj.getDescriptiFo());
             pstat.setDate(4, new java.sql.Date(obj.getDateDebutO().getTime()));

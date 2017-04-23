@@ -9,7 +9,7 @@ import java.util.Date;
 
 /**
  *
- * @author 
+ * @author Aya
  */
 public class OffreStage {
     private int idOffre, dureeO, remuneration;
